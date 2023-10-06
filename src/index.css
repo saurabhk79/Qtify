@@ -1,5 +1,6 @@
 :root {
-  /* Global variables to be defined here */
+  --color-primary: #34c94b;
+  --color-black: #121212;
   --color-white: #ffffff;
 }
 
@@ -17,6 +18,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body {
+  background-color: var(--color-black);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
