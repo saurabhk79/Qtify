@@ -1,0 +1,20 @@
+.navSearchBox {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  width: 568px;
+
+  display: flex;
+}
+
+.textbox {
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.searchIcon {
+  padding: 0 23px;
+}
