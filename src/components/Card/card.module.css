@@ -1,0 +1,26 @@
+.cardWrapper {
+  height: 230px;
+  width: 160px;
+  color: var(--color-white);
+}
+
+.card {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.cardFooter {
+  background-color: var(--color-white);
+  padding: 4px;
+}
+
+.cardButton {
+  border-radius: 10px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+}
