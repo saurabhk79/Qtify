@@ -50,10 +50,6 @@ h6 {
   isolation: isolate;
 }
 
-.cards-grid {
-  display: flex;
-  column-gap: 40px;
-  row-gap: 24px;
-  flex-wrap: wrap;
-  margin-left: 40px;
+.swiper-slide {
+  width: auto !important;
 }

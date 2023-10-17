@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+
 import { fetchTopAlbums } from "./api/api";
-import Card from "./components/Card";
+import CarouselSection from "./components/CarouselSection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -21,12 +22,11 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <h2>Top Albums</h2>
-      <div className="cards-grid">
-        {topAlbumsData.map((item) => {
-          return <Card data={item} type={"album"} key={item.id} />;
-        })}
-      </div>
+      <CarouselSection
+        data={topAlbumsData}
+        title={"Top Albums"}
+        type={"album"}
+      />
     </div>
   );
 }

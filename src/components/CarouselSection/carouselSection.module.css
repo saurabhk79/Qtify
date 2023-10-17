@@ -1,0 +1,22 @@
+.carouselSection {
+  margin: 0 24px;
+  color: white;
+}
+
+.cardsBox {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 24px;
+  flex-wrap: wrap;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toggleText {
+  cursor: pointer;
+  color: var(--color-primary);
+}
