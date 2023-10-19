@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import BasicTabs from "../BasicTabs";
 import Card from "../Card";
 import Carousel from "../Carousel";
-import styles from "./carouselSection.module.css";
+import styles from "./section.module.css";
 
-const CarouselSection = ({ data, title, type }) => {
+const Section = ({ data, title, type, value = 0, handleChange = null }) => {
   const [carouselToggle, setCarouselToggle] = useState(false);
 
   const handleToggle = () => {
@@ -11,13 +12,19 @@ const CarouselSection = ({ data, title, type }) => {
   };
 
   return (
-    <div className={styles.carouselSection}>
+    <div className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>{title}</h3>
-        <h4 className={styles.toggleText} onClick={handleToggle}>
-          {carouselToggle ? "Collapse All" : "Show All"}
-        </h4>
+        {type === "songs" ? null : (
+          <h4 className={styles.toggleText} onClick={handleToggle}>
+            {carouselToggle ? "Collapse All" : "Show All"}
+          </h4>
+        )}
       </div>
+
+      {type === "songs" ? (
+        <BasicTabs value={value} handleChange={handleChange} />
+      ) : null}
 
       {carouselToggle ? (
         <div className={styles.cardsBox}>
@@ -35,4 +42,4 @@ const CarouselSection = ({ data, title, type }) => {
   );
 };
 
-export default CarouselSection;
+export default Section;
