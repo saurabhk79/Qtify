@@ -1,0 +1,24 @@
+.wrapper {
+  max-width: 1130px;
+  margin: 32px auto;
+}
+
+.header {
+  text-align: center;
+  font-weight: 900;
+  margin: 20px 0;
+  color: white;
+}
+
+.accordion {
+  border: 1px solid #fff;
+  margin-bottom: 8px;
+  border-radius: 10px !important;
+}
+
+.accordionSummary {
+  background-color: var(--color-black) !important;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}

@@ -4,6 +4,7 @@ import { fetchTopAlbums, fetchNewAlbums, fetchSongs } from "./api/api";
 import Section from "./components/Section";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import AccordionComponent from "./components/AccordionComponent";
 
 function App() {
   const [topAlbumsData, setTopAlbumsData] = useState([]);
@@ -92,6 +93,7 @@ function App() {
           handleChange={handleChange}
         />
       </div>
+      <AccordionComponent />
     </div>
   );
 }
