@@ -5,11 +5,11 @@ import Searchbar from "../SearchBar";
 
 import styles from "./navbar.module.css";
 
-function Navbar() {
+function Navbar({ allAlbumsData }) {
   return (
     <nav className={styles.navbar}>
       <Brand />
-      <Searchbar />
+      <Searchbar allAlbumsData={allAlbumsData} />
       <FeedbackButton />
     </nav>
   );
