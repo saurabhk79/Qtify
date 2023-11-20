@@ -10,6 +10,7 @@ function App() {
   const [newAlbumsData, setNewAlbumsData] = useState([]);
   const [songsData, setSongsData] = useState([]);
   const [filteredSongs, setFilteredSongs] = useState([]);
+  const [allAlbumsData, setAllAlbumsData] = useState([]);
 
   const [value, setValue] = useState(0);
 
@@ -77,9 +78,15 @@ function App() {
     generateAllSongsData();
   }, []);
 
+  useEffect(() => {
+    if (topAlbumsData && topAlbumsData) {
+      setAllAlbumsData([...topAlbumsData, ...newAlbumsData]);
+    }
+  }, [topAlbumsData, newAlbumsData]);
+
   return (
     <div>
-      <Navbar />
+      <Navbar allAlbumsData={allAlbumsData} />
       <Hero />
       <div>
         <Section data={topAlbumsData} title={"Top Albums"} type={"album"} />
